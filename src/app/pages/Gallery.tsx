@@ -8,29 +8,29 @@ export function Gallery() {
 
   const galleryImages = [
     {
-      url: "https://images.unsplash.com/photo-1715322608224-a9efaeeffaf7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0aGVhdHJpY2FsJTIwcGVyZm9ybWFuY2UlMjBzdGFnZSUyMGxpZ2h0c3xlbnwxfHx8fDE3NzE0NTc5OTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      title: "Stage Presence",
+      url: "/gallery/tethered-sketch.jpg",
+      title: "Set Sketch",
       category: "Performance"
     },
     {
-      url: "https://images.unsplash.com/photo-1768692507063-ae43e2c4ecfd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbW1lcnNpdmUlMjBhcnQlMjBpbnN0YWxsYXRpb258ZW58MXx8fHwxNzcxNDU3OTkzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      title: "Immersive Installation",
-      category: "Installation"
+      url: "/gallery/tethered-set.jpg",
+      title: "Metal",
+      category: "Performance"
     },
     {
-      url: "https://images.unsplash.com/photo-1723395876618-5fe25544b927?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwZXJmb3JtYW5jZSUyMGFydCUyMGF1ZGllbmNlfGVufDF8fHx8MTc3MTQ1ODIwMXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      title: "Audience Journey",
-      category: "Experience"
+      url: "tethered-felix",
+      title: "Felix, Set Designer",
+      category: "Performance"
     },
     {
-      url: "https://images.unsplash.com/photo-1757870049839-63b9961457fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsb2NrJTIwY2FuYWwlMjB3YXRlcndheXxlbnwxfHx8fDE3NzE0NTc5OTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      title: "Waterway Passages",
-      category: "Site-Specific"
+      url: "/gallery/rose-costume.jpg",
+      title: "Rose's Costume",
+      category: "Performance"
     },
     {
-      url: "https://images.unsplash.com/photo-1696178924966-36fc5fe157e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYW5jZXJzJTIwbW92ZW1lbnQlMjBjaG9yZW9ncmFwaHl8ZW58MXx8fHwxNzcxNDU4MjAzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      title: "Movement Studies",
-      category: "Choreography"
+      url: "/gallery/marianna-washingline.jpg",
+      title: "Her Machine",
+      category: "Performance"
     },
     {
       url: "https://images.unsplash.com/photo-1763373569776-1d5cb36dcdf9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHR1bm5lbCUyMGxpZ2h0fGVufDF8fHx8MTc3MTQ1Nzk5NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
