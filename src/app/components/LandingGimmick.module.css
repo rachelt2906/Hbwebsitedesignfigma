@@ -1,0 +1,226 @@
+/* LandingGimmick.module.css */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400&display=swap");
+
+.root,
+.root * ,
+.root *::before,
+.root *::after {
+  box-sizing: border-box;
+}
+
+.root {
+  --board: #090909;
+  --chalk: #f0ede8;
+  --chalk-dim: rgba(240, 237, 232, 0.45);
+  --chalk-mute: rgba(240, 237, 232, 0.14);
+  --brass: #c8a86a;
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  background: var(--board);
+  color: var(--chalk);
+  font-family: "DM Sans", sans-serif;
+  font-weight: 300;
+
+  /* Hide system cursor ONLY inside this section */
+  cursor: none;
+}
+
+.seaCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.beamCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.grain {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-size: 300px 300px;
+  opacity: 0.055;
+  mix-blend-mode: overlay;
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 88% 88% at 50% 50%,
+    transparent 28%,
+    rgba(5, 5, 5, 0.82) 100%
+  );
+}
+
+/* cursor */
+.cursorDot {
+  position: absolute;
+  z-index: 200;
+  width: 8px;
+  height: 8px;
+  background: var(--brass);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.cursorRing {
+  position: absolute;
+  z-index: 199;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(200, 168, 106, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, opacity 0.2s;
+}
+
+.cursorRingExpand {
+  width: 56px;
+  height: 56px;
+  opacity: 0.35;
+}
+
+/* env — full width */
+.envWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  pointer-events: none;
+  opacity: 0.78;
+}
+
+.envWrap svg {
+  display: block;
+  width: 100%;
+  height: 780px;
+}
+
+/* landing text */
+.landing {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 160px 52px 0;
+  pointer-events: none;
+}
+
+.landingContent {
+  max-width: 900px;
+  pointer-events: all;
+}
+
+.landingEyebrow {
+  font-size: 0.68rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.landingTitle {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(4rem, 10vw, 9.5rem);
+  font-weight: 300;
+  line-height: 0.9;
+  margin-bottom: 40px;
+}
+
+.scrollCue {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--chalk-mute);
+  pointer-events: none;
+}
+
+.scrollLine {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(
+    to bottom,
+    rgba(200, 168, 106, 0.5),
+    transparent
+  );
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+/* lit text */
+.litGroup {
+  position: relative;
+  display: inline-block;
+}
+
+.litBase {
+  color: rgba(9, 9, 9, 0.95);
+}
+
+.litLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: pre;
+  pointer-events: none;
+}
+
+.litLayerLetter {
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 0.05s ease;
+}
+
+.eyebrowLitLetter {
+  color: var(--brass);
+  text-shadow: 0 0 18px rgba(200, 168, 106, 0.95),
+    0 0 45px rgba(200, 168, 106, 0.45);
+}
+
+.titleLit1Letter {
+  color: var(--chalk);
+  text-shadow: 0 0 28px rgba(240, 237, 232, 0.95),
+    0 0 65px rgba(240, 237, 232, 0.35);
+}
+
+.titleLit2Letter {
+  color: #dcc898;
+  text-shadow: 0 0 28px rgba(220, 200, 152, 0.95),
+    0 0 65px rgba(200, 160, 90, 0.42);
+}
+
+@keyframes scrollPulse {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scaleY(1.1);
+  }
+}
