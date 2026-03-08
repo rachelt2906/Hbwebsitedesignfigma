@@ -8,6 +8,7 @@ export function RootLayout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,12 +23,16 @@ export function RootLayout() {
   }, [location]);
 
   const navLinks = [
-    { path: "/", label: "Home" },
-    { path: "/about", label: "About" },
+    { path: "/about", label: "About", children: [
+      { path: "/about#team", label: "Team" },           // 👈 scrolls to the section
+      { path: "/about/our-philosophy", label: "Our Philosophy" },
+      { path: "/about/glossary", label: "Glossary" },
+    ]},
     { path: "/work", label: "Work" },
     { path: "/gallery", label: "Gallery" },
-    { path: "/offerings", label: "Offerings" },
-    { path: "/formats", label: "Formats" },
+    { path: "/offerings", label: "Offerings", children: [
+      { path: "/offerings/format-generator", label: "Format Generator" },
+    ]},
     { path: "/contact", label: "Contact" },
   ];
 
@@ -53,18 +58,47 @@ export function RootLayout() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-9">
-          {navLinks.slice(1).map((link) => (
+       <div className="hidden md:flex items-center gap-9">
+        {navLinks.slice(1).map((link) => (
+          <div
+            key={link.path}
+            className="relative"
+            onMouseEnter={() => setOpenDropdown(link.path)}
+            onMouseLeave={() => setOpenDropdown(null)}
+          >
             <Link
-              key={link.path}
               to={link.path}
               className="relative text-[0.72rem] tracking-[0.15em] uppercase transition-colors"
-              style={{ color: location.pathname === link.path ? 'var(--brass)' : 'var(--text-dim)' }}
+              style={{ color: location.pathname.startsWith(link.path) && link.path !== '/' ? 'var(--brass)' : 'var(--text-dim)' }}
             >
               {link.label}
             </Link>
-          ))}
-        </div>
+
+            {/* Dropdown */}
+            {link.children && openDropdown === link.path && (
+              <motion.div
+                initial={{ opacity: 0, y: -4 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -4 }}
+                className="absolute top-full left-0 pt-3 z-50"
+              >
+                <div className="bg-[rgba(7,7,10,0.97)] backdrop-blur-md border border-[var(--border)] py-2 min-w-[180px]">
+                  {link.children.map((child) => (
+                    <Link
+                      key={child.path}
+                      to={child.path}
+                      className="block px-5 py-2.5 text-[0.68rem] tracking-[0.15em] uppercase transition-colors hover:text-[var(--brass)]"
+                      style={{ color: location.pathname === child.path ? 'var(--brass)' : 'var(--text-dim)' }}
+                    >
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+          </div>
+        ))}
+      </div>
 
         {/* Mobile Menu Button */}
         <button
@@ -86,13 +120,27 @@ export function RootLayout() {
           >
             <div className="px-6 py-4 space-y-4">
               {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className="block text-lg tracking-wide hover:text-gray-300 transition-colors"
-                >
-                  {link.label}
-                </Link>
+                <div key={link.path}>
+                  <Link
+                    to={link.path}
+                    className="block text-lg tracking-wide hover:text-gray-300 transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                  {link.children && (
+                    <div className="pl-4 mt-2 space-y-2">
+                      {link.children.map((child) => (
+                        <Link
+                          key={child.path}
+                          to={child.path}
+                          className="block text-sm tracking-wide text-[var(--text-dim)] hover:text-[var(--brass)] transition-colors"
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
           </motion.div>

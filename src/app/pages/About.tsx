@@ -102,7 +102,7 @@ export function About() {
       </section>
 
       {/* Team Section */}
-      <section className="bg-[#07070a] py-[120px] px-[52px]">
+      <section id="team" className="bg-[#07070a]py-[120px] px-[52px]">
         <div className="max-w-[1200px] mx-auto">
           <div className="flex items-center gap-5 mb-14 text-[0.62rem] tracking-[0.3em] uppercase" style={{ color: 'var(--brass)' }}>
             <div className="w-10 h-px" style={{ background: 'var(--brass-dim)' }} />
