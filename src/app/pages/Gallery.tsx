@@ -18,7 +18,7 @@ export function Gallery() {
       category: "Performance"
     },
     {
-      url: "tethered-felix",
+      url: "/gallery/tethered-felix.jpg",
       title: "Felix, Set Designer",
       category: "Performance"
     },
@@ -33,39 +33,69 @@ export function Gallery() {
       category: "Performance"
     },
     {
-      url: "https://images.unsplash.com/photo-1763373569776-1d5cb36dcdf9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHR1bm5lbCUyMGxpZ2h0fGVufDF8fHx8MTc3MTQ1Nzk5NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      title: "Liminal Transitions",
-      category: "Experience"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1759502418494-bee52af25972?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdG1vc3BoZXJpYyUyMHN0YWdlJTIwbGlnaHRpbmd8ZW58MXx8fHwxNzcxNDU4MjAyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      title: "Atmospheric Design",
-      category: "Installation"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1768026058295-caf3636c61ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbnRlcmFjdGl2ZSUyMHRlY2hub2xvZ3klMjBpbnN0YWxsYXRpb258ZW58MXx8fHwxNzcxNDU3OTk1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      title: "Interactive Technology",
-      category: "Technology"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1759955074535-2cc73232e056?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9qZWN0aW9uJTIwbWFwcGluZyUyMGJ1aWxkaW5nfGVufDF8fHx8MTc3MTQ1ODIwM3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      title: "Projection Mapping",
-      category: "Technology"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1614469723922-c043ad9fd036?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzaXRlJTIwc3BlY2lmaWMlMjBhcnQlMjBvdXRkb29yc3xlbnwxfHx8fDE3NzE0NTgyMDN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      title: "Outdoor Interventions",
-      category: "Site-Specific"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1613310766323-d6dd5bce268d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxleHBlcmltZW50YWwlMjB0aGVhdHJlJTIwZGFya3xlbnwxfHx8fDE3NzE0NTgyMDN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      title: "Experimental Forms",
+      url: "/gallery/93-blueroom.jpg",
+      title: "Tethered- 93 Feet Live",
       category: "Performance"
     },
     {
-      url: "https://images.unsplash.com/photo-1542031630-99647f0f3e54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXJib3IlMjB3YXRlcmZyb250JTIwdHdpbGlnaHR8ZW58MXx8fHwxNzcxNDU3OTkyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      title: "Harbor Horizons",
-      category: "Site-Specific"
+      url: "/gallery/93-bts.jpg",
+      title: "BTS",
+      category: "Performance"
+    },
+    {
+      url: "blue-rose",
+      title: "Rose",
+      category: "Performance"
+    },
+    {
+      url: "/gallery/dance1.jpg",
+      title: "Move",
+      category: "Dance"
+    },
+    {
+      url: "/gallery/bts-tethered1.jpg",
+      title: "Rose and Taylor",
+      category: "Performance"
+    },
+    {
+      url: "/gallery/burnt-rope.jpg",
+      title: "Rope",
+      category: "Dance"
+    },
+    {
+      url: "/gallery/essay-installation1.jpg",
+      title: "Writing on the wall",
+      category: "Dance"
+    },
+    {
+      url: "/gallery/ma-performance.jpg",
+      title: "I-Harbourer",
+      category: "Performance"
+    },
+    {
+      url: "/gallery/rock-projection.jpg",
+      title: "Rocks",
+      category: "Installation"
+    },
+    {
+      url: "/gallery/rose-and-taylor.jpg",
+      title: "Edinburgh Fringe",
+      category: "Performance"
+    },
+    {
+      url: "/gallery/technorave.jpg",
+      title: "Techno Tunnel Rave",
+      category: "Experience"
+    },
+    {
+      url: "/gallery/water-dance.jpg",
+      title: "Splash",
+      category: "Installation"
+    },
+    {
+      url: "/gallery/clayhand.jpg",
+      title: "Holding Hands",
+      category: "Installation"
     }
   ];
 
