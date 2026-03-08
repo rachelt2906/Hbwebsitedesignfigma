@@ -8,11 +8,6 @@ export function Gallery() {
 
   const galleryImages = [
     {
-      url: "/gallery/tethered-sketch.jpg",
-      title: "Set Sketch",
-      category: "Performance"
-    },
-    {
       url: "/gallery/tethered-set.jpg",
       title: "Metal",
       category: "Performance"
@@ -28,11 +23,6 @@ export function Gallery() {
       category: "Performance"
     },
     {
-      url: "/gallery/marianna-washingline.jpg",
-      title: "Her Machine",
-      category: "Performance"
-    },
-    {
       url: "/gallery/93-blueroom.jpg",
       title: "Tethered- 93 Feet Live",
       category: "Performance"
@@ -43,7 +33,7 @@ export function Gallery() {
       category: "Performance"
     },
     {
-      url: "blue-rose",
+      url: "/gallery/blue-rose.jpg",
       title: "Rose",
       category: "Performance"
     },
