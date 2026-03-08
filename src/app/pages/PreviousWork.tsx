@@ -7,68 +7,66 @@ export function PreviousWork() {
 
   const projects = [
     {
-      title: "Harbour Memories",
-      year: "2025",
-      location: "Birmingham Canals, UK",
-      type: "Site-Specific Installation",
-      audience: "250+ participants",
-      description: "An immersive journey through the waterways of Birmingham, exploring inherited memories and migration stories. Participants navigated locks and tunnels while experiencing spatially designed choreography and interactive soundscapes.",
-      highlights: [
-        "Multi-sensory canal-side experience",
-        "Real migration stories from Birmingham families",
-        "Interactive lock mechanisms",
-        "Projection mapping on water"
-      ],
-      image: "https://images.unsplash.com/photo-1757870049839-63b9961457fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsb2NrJTIwY2FuYWwlMjB3YXRlcndheXxlbnwxfHx8fDE3NzE0NTc5OTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      tags: ["Site-Specific", "Migration", "Water", "Community"]
-    },
-    {
-      title: "The Body Harbours",
-      year: "2024",
-      location: "Welsh Coast, Wales",
+      title: "THE CRASH!",
+      year: "2026",
+      location: "London, UK",
       type: "Theatrical Performance",
-      audience: "180 per show",
-      description: "A theatrical exploration of what our bodies carry—scars, gestures, inherited movements. Performed in a decommissioned lighthouse, audiences moved through different levels, each revealing layers of personal and collective memory.",
+      audience: "N/A",
+      description: "WORK IN PROGRESS",
       highlights: [
-        "Vertical journey through lighthouse",
-        "Choreographed movement sequences",
-        "Personal story integration",
-        "Intimate audience interaction"
+        "Album launch of Steven Bamidele's The Crash!",
+        "Projection mapping accompanied by dancer",
+        "Interactive lock mechanisms"
       ],
-      image: "https://images.unsplash.com/photo-1715322608224-a9efaeeffaf7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0aGVhdHJpY2FsJTIwcGVyZm9ybWFuY2UlMjBzdGFnZSUyMGxpZ2h0c3xlbnwxfHx8fDE3NzE0NTc5OTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      tags: ["Theatre", "Body", "Memory", "Lighthouse"]
+      image: "/gallery/crash-poster.jpg",
+      tags: ["Site-Specific", "Projection", "Music", "Dance"]
     },
     {
-      title: "Liminal Spaces",
-      year: "2024",
-      location: "Underground Tunnels, London",
-      type: "Immersive Experience",
-      audience: "50 per session",
-      description: "An experimental piece exploring the transition between states. Participants journeyed through repurposed underground tunnels, experiencing the sensation of moving from one reality to another through technology, light, and sound.",
+      title: "Tunnel Groove",
+      year: "2026",
+      location: "London, UK",
+      type: "Multi-sensory Experience",
+      audience: "50",
+      description: "A funky house tunnel takeover. The second event in an evolving series exploring how sound, space, and visual illusion can reshape cultural events and reframe traditional nightlife as immersive world-led experiences. We transformed a tunnel in the heart of London into a funky house experience inspired by crazy houses and fairground distortion. With a curated all woman lineup of specialist DJs, this was part rave, part theatre, part hallucination.",
       highlights: [
-        "Immersive tunnel environments",
-        "Cutting-edge audio technology",
-        "State transformation narrative",
+        "Trippy projection-mapped art",
+        "All female DJ lineup",
+        "Mirror effects",
+        "Theatrical set design"
+      ],
+      image: "/gallery/tunnelgroove-poster.jpg",
+      tags: ["Art", "DJs", "Set Design", "Projection"]
+    },
+    {
+      title: "Tethered",
+      year: "2025",
+      location: "Touring (London to Edinburgh)",
+      type: "Immersive Theatre",
+      audience: "20-50 per session",
+      description: "ONGOING WORK. Set in a future dystopia where genetic predispositions to chronic illness have been triggered by a worldwide technological phenomenon, this immersive installation fuses emerging technologies and dance theatre to question the importance of personal care and connection in a world of increasing isolation. Rose and Taylor narrate their sensations and memories in an attempt to come to terms with their relationship to one another, their past and the world at large. We invite you to experience this new world as they do, embody and play with the boundaries of separation in performance.",
+      highlights: [
+        "Ongoing R&D involving Haptic Technology",
+        "Interactive performance",
+        "Physical theatre",
         "Limited intimate groups"
       ],
-      image: "https://images.unsplash.com/photo-1763373569776-1d5cb36dcdf9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHR1bm5lbCUyMGxpZ2h0fGVufDF8fHx8MTc3MTQ1Nzk5NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      tags: ["Experimental", "Technology", "Tunnel", "Transformation"]
+      image: "/gallery/tethered-poster.jpg",
+      tags: ["Experimental", "Technology", "Dance", "Interactive"]
     },
     {
-      title: "Connected Worlds",
-      year: "2023",
-      location: "Multiple Sites, UK",
-      type: "Touring Production",
-      audience: "500+ across tour",
-      description: "A touring piece about connection in the digital age. Using innovative projection and interactive technology, this production explored how we maintain identity and relationships across physical and virtual spaces.",
+      title: "Techno Tunnel",
+      year: "2025",
+      location: "London, UK",
+      type: "Multi-sensory Experience",
+      audience: "40",
+      description: "An immersive rave, meets art installation- with projection mapping that responds to sound and movement. Live sets from genre-defying musicians pushing the boundaries of electronic and experimental sound, from fusions of techno with live saxophone to an acoustic guitar set. Descend into a liminal space where theatre, rave, and installation art collide.",
       highlights: [
-        "Multi-city tour",
-        "Interactive digital elements",
-        "Real participant stories",
-        "Adaptive site design"
+        "Vibrant Projection-mapping",
+        "Immersive tunnel experience",
+        "Live music combined with DJ sets"
       ],
-      image: "https://images.unsplash.com/photo-1768026058295-caf3636c61ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbnRlcmFjdGl2ZSUyMHRlY2hub2xvZ3klMjBpbnN0YWxsYXRpb258ZW58MXx8fHwxNzcxNDU3OTk1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      tags: ["Touring", "Digital", "Interactive", "Connection"]
+      image: "/gallery/technotunnel-poster.jpg",
+      tags: ["Touring", "Projection", "Saxophone", "Connection"]
     }
   ];
 
