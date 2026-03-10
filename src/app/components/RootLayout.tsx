@@ -6,6 +6,8 @@ import { CustomCursor } from "./CustomCursor";
 
 export function RootLayout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isAboutHovered, setIsAboutHovered] = useState(false);
+  const [isOfferingsHovered, setIsOfferingsHovered] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
@@ -27,8 +29,19 @@ export function RootLayout() {
     { path: "/work", label: "Work" },
     { path: "/gallery", label: "Gallery" },
     { path: "/offerings", label: "Offerings" },
-    { path: "/formats", label: "Formats" },
     { path: "/contact", label: "Contact" },
+  ];
+
+  const aboutSubpages = [
+    { path: "/about", label: "About" },
+    { path: "/about/team", label: "Team" },
+    { path: "/about/philosophy", label: "Our Philosophy" },
+    { path: "/about/glossary", label: "Glossary" },
+  ];
+
+  const offeringsSubpages = [
+    { path: "/offerings", label: "Offerings" },
+    { path: "/offerings/format-generator", label: "Format Generator" },
   ];
 
   return (
@@ -54,16 +67,110 @@ export function RootLayout() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-9">
-          {navLinks.slice(1).map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              className="relative text-[0.72rem] tracking-[0.15em] uppercase transition-colors"
-              style={{ color: location.pathname === link.path ? 'var(--brass)' : 'var(--text-dim)' }}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.slice(1).map((link) => {
+            if (link.label === "About") {
+              return (
+                <div
+                  key={link.path}
+                  className="relative"
+                  onMouseEnter={() => setIsAboutHovered(true)}
+                  onMouseLeave={() => setIsAboutHovered(false)}
+                >
+                  <Link
+                    to={link.path}
+                    className="relative text-[0.72rem] tracking-[0.15em] uppercase transition-colors"
+                    style={{ color: location.pathname.startsWith('/about') ? 'var(--brass)' : 'var(--text-dim)' }}
+                  >
+                    {link.label}
+                  </Link>
+                  
+                  {/* Dropdown Menu */}
+                  <AnimatePresence>
+                    {isAboutHovered && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        className="absolute top-full left-0 mt-2 w-48 bg-[#14141a] border border-[var(--border)] rounded-md shadow-lg z-50"
+                      >
+                        {aboutSubpages.map((subpage) => (
+                          <Link
+                            key={subpage.path}
+                            to={subpage.path}
+                            className="block px-4 py-3 text-[0.68rem] tracking-[0.15em] uppercase hover:bg-[#1a1a20] transition-colors"
+                            style={{ 
+                              color: location.pathname === subpage.path ? 'var(--brass)' : 'var(--text-dim)',
+                              borderBottom: '1px solid var(--border)'
+                            }}
+                            onClick={() => setIsAboutHovered(false)}
+                          >
+                            {subpage.label}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              );
+            }
+            
+            if (link.label === "Offerings") {
+              return (
+                <div
+                  key={link.path}
+                  className="relative"
+                  onMouseEnter={() => setIsOfferingsHovered(true)}
+                  onMouseLeave={() => setIsOfferingsHovered(false)}
+                >
+                  <Link
+                    to={link.path}
+                    className="relative text-[0.72rem] tracking-[0.15em] uppercase transition-colors"
+                    style={{ color: location.pathname.startsWith('/offerings') ? 'var(--brass)' : 'var(--text-dim)' }}
+                  >
+                    {link.label}
+                  </Link>
+                  
+                  {/* Dropdown Menu */}
+                  <AnimatePresence>
+                    {isOfferingsHovered && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        className="absolute top-full left-0 mt-2 w-48 bg-[#14141a] border border-[var(--border)] rounded-md shadow-lg z-50"
+                      >
+                        {offeringsSubpages.map((subpage) => (
+                          <Link
+                            key={subpage.path}
+                            to={subpage.path}
+                            className="block px-4 py-3 text-[0.68rem] tracking-[0.15em] uppercase hover:bg-[#1a1a20] transition-colors"
+                            style={{ 
+                              color: location.pathname === subpage.path ? 'var(--brass)' : 'var(--text-dim)',
+                              borderBottom: '1px solid var(--border)'
+                            }}
+                            onClick={() => setIsOfferingsHovered(false)}
+                          >
+                            {subpage.label}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              );
+            }
+            
+            return (
+              <Link
+                key={link.path}
+                to={link.path}
+                className="relative text-[0.72rem] tracking-[0.15em] uppercase transition-colors"
+                style={{ color: location.pathname === link.path ? 'var(--brass)' : 'var(--text-dim)' }}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </div>
 
         {/* Mobile Menu Button */}
@@ -85,15 +192,65 @@ export function RootLayout() {
             className="md:hidden bg-black/95 backdrop-blur-md border-t border-[var(--border)] fixed top-[72px] left-0 right-0 z-40"
           >
             <div className="px-6 py-4 space-y-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className="block text-lg tracking-wide hover:text-gray-300 transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                if (link.label === "About") {
+                  return (
+                    <div key={link.path}>
+                      <Link
+                        to={link.path}
+                        className="block text-lg tracking-wide hover:text-gray-300 transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                      <div className="ml-4 mt-2 space-y-2">
+                        {aboutSubpages.slice(1).map((subpage) => (
+                          <Link
+                            key={subpage.path}
+                            to={subpage.path}
+                            className="block text-base tracking-wide text-gray-400 hover:text-gray-300 transition-colors"
+                          >
+                            {subpage.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                }
+                
+                if (link.label === "Offerings") {
+                  return (
+                    <div key={link.path}>
+                      <Link
+                        to={link.path}
+                        className="block text-lg tracking-wide hover:text-gray-300 transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                      <div className="ml-4 mt-2 space-y-2">
+                        {offeringsSubpages.slice(1).map((subpage) => (
+                          <Link
+                            key={subpage.path}
+                            to={subpage.path}
+                            className="block text-base tracking-wide text-gray-400 hover:text-gray-300 transition-colors"
+                          >
+                            {subpage.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                }
+                
+                return (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    className="block text-lg tracking-wide hover:text-gray-300 transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
             </div>
           </motion.div>
         )}
@@ -122,18 +279,6 @@ export function RootLayout() {
           </div>
           <div className="text-[0.68rem] tracking-[0.1em]" style={{ color: 'var(--text-muted)' }}>
             © 2026 The Harbourers. All rights reserved.
-          </div>
-          <div className="hidden md:flex gap-7">
-            {navLinks.slice(1, 5).map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className="text-[0.65rem] tracking-[0.15em] uppercase transition-colors hover:text-[var(--brass)]"
-                style={{ color: 'var(--text-muted)' }}
-              >
-                {link.label}
-              </Link>
-            ))}
           </div>
         </div>
       </footer>

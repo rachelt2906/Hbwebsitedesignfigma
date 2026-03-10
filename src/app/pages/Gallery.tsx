@@ -8,57 +8,57 @@ export function Gallery() {
 
   const galleryImages = [
     {
-      url: "/gallery/tethered-set.jpg",
+      url: "/gallery/tethered-set.JPG",
       title: "Metal",
       category: "Performance"
     },
     {
-      url: "/gallery/tethered-felix.jpg",
+      url: "/gallery/tethered-felix.JPG",
       title: "Felix, Set Designer",
       category: "Performance"
     },
     {
-      url: "/gallery/rose-costume.jpg",
+      url: "/gallery/rose-costume.JPG",
       title: "Rose's Costume",
       category: "Performance"
     },
     {
-      url: "/gallery/93-blueroom.jpg",
+      url: "/gallery/93-blueroom.JPG",
       title: "Tethered- 93 Feet Live",
       category: "Performance"
     },
     {
-      url: "/gallery/93-bts.jpg",
+      url: "/gallery/93-bts.JPG",
       title: "BTS",
       category: "Performance"
     },
     {
-      url: "/gallery/blue-rose.jpg",
+      url: "/gallery/blue-rose.JPG",
       title: "Rose",
       category: "Performance"
     },
     {
-      url: "/gallery/dance1.jpg",
+      url: "/gallery/dance1.JPG",
       title: "Move",
       category: "Dance"
     },
     {
-      url: "/gallery/bts-tethered1.jpg",
+      url: "/gallery/bts-tethered.JPG",
       title: "Rose and Taylor",
       category: "Performance"
     },
     {
-      url: "/gallery/burnt-rope.jpg",
+      url: "/gallery/burnt-rope.JPG",
       title: "Rope",
       category: "Dance"
     },
     {
-      url: "/gallery/essay-installation1.jpg",
+      url: "/gallery/essay-installation1.JPG",
       title: "Writing on the wall",
       category: "Dance"
     },
     {
-      url: "/gallery/ma-performance.jpg",
+      url: "/gallery/ma-performance.JPG",
       title: "I-Harbourer",
       category: "Performance"
     },
@@ -68,22 +68,22 @@ export function Gallery() {
       category: "Installation"
     },
     {
-      url: "/gallery/rose-and-taylor.jpg",
+      url: "/gallery/rose-and-taylor.JPG",
       title: "Edinburgh Fringe",
       category: "Performance"
     },
     {
-      url: "/gallery/technorave.jpg",
+      url: "/gallery/technorave.JPG",
       title: "Techno Tunnel Rave",
       category: "Experience"
     },
     {
-      url: "/gallery/water-dance.jpg",
+      url: "/gallery/water-dance.JPG",
       title: "Splash",
       category: "Installation"
     },
     {
-      url: "/gallery/clayhand.jpg",
+      url: "/gallery/clayhand.JPG",
       title: "Holding Hands",
       category: "Installation"
     }
