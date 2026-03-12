@@ -1,7 +1,6 @@
 
-  # Immersive Website Design
+  # The Harbourers
 
-  This is a code bundle for Immersive Website Design. The original project is available at https://www.figma.com/design/Q4LXhYPaOJOeepTYQS6yid/Immersive-Website-Design.
 
   ## Running the code
 
