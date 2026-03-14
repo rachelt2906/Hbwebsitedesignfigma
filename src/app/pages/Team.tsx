@@ -8,34 +8,48 @@ export function Team() {
       role: "Co-Founder & Artistic Director",
       icon: Compass,
       mission: "To help people construct their reality & get a grip on their perception of self",
-      bio: "Marianna is an immersive performance practitioner who works with ethnographic research to tackle the lived marginalisation of illness associated with women’s health. Having completed a Masters degree at London Contemporary Dance School, she is now developing her practice with new dimensions of technical enhancement for performance alongside Technical Director Rachel Thuo. The Harbourer’s is the name of their performance company and harbouring is a methodology Marianna uses to create narrative. This theatrical technique engages knowledge acquired from her studies in medical anthropology, the philosophy of arts and of sciences.",
+      bio: "Marianna is an immersive performance practitioner who works with ethnographic research to tackle the lived marginalisation of illness associated with women’s health. She is now developing her practice with new dimensions of technical enhancement for performance. The term harbouring is a methodology Marianna uses to create narrative. This theatrical technique engages knowledge acquired from her studies in medical anthropology, the philosophy of arts and of sciences.<br><br>• MA Expanded Dance Practice, London Contemporary Dance School<br>• MSc Anthropology, UCL<br>• BA English and Philosophy, University of Nottingham",
       focus: [
         "Spatial choreography",
         "Body memory and personality",
         "Mental health and perception",
         "Audience autonomy and articulation"
       ],
-      image: "https://images.unsplash.com/photo-1753162658596-2ccba5e4246a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMHRlYW0lMjBjb2xsYWJvcmF0aW9ufGVufDF8fHx8MTc3MTM1NDQ5OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+      image: "/gallery/marianna.JPG"
     },
     {
       name: "Rachel Thuo",
       role: "Co-Founder & Experience Designer",
       icon: Lightbulb,
       mission: "To devise new and innovative immersive formats through worldbuilding and theatrics",
-      bio: "Rachel designs and produces immersive experiences that use emerging technology as material—enhancing storytelling, shaping audience journeys and encounters. She works in innovation and creative R&D, delivering interactive experiences in early-stage, uncertain spaces where new formats are defined. Her domain expertise lies in Extended Reality, Haptic Technology and 360-Degree Film. Cross-sector experience within the creative industries and BSc Computer Science and Mathematics, Lancaster University.",
+      bio: "Rachel designs and produces immersive experiences that use emerging technology as material—enhancing storytelling, shaping audience journeys and encounters. She works in innovation and creative R&D, delivering interactive experiences in early-stage, uncertain spaces where new formats are defined. Her domain expertise lies in Extended Reality, Haptic Technology and 360-Degree Film. Cross-sector experience inside of and outside the creative industries.<br><br>• BSc Computer Science and Mathematics, Lancaster University.",
       focus: [
         "Immersive format innovation",
         "Worldbuilding and theatrics",
         "Audience journey design",
         "Seamless end-to-end experiences"
       ],
-      image: "https://images.unsplash.com/photo-1753162658596-2ccba5e4246a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMHRlYW0lMjBjb2xsYWJvcmF0aW9ufGVufDF8fHx8MTc3MTM1NDQ5OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+      image: "/gallery/rachel1.jpg"
+    },
+    {
+      name: "Xiwen Wang",
+      role: "Strategy & Commercial Lead",
+      icon: Users,
+      mission: "To expand the cultural and commercial potential of bold artistic work through strategic and long-term business thinking.",
+      bio: "With a background spanning film acquisition, distribution, and creative agency work, Xiwen brings a strategic and commercially grounded perspective to cultural production. Her work focuses on developing insight-led strategy, shaping innovative business models, and building strong structures and relationships behind ambitious immersive projects.<br><br>• BA Media Studies, Scripps College<br>• MBA Business Administration, University of Oxford.",
+      focus: [
+        "Business strategy",
+        "Funding and financial planning",
+        "Operations and process design",
+        "Ecosystem and partnerships and development"
+      ],
+      image: "/gallery/xiwen.JPG"
     },
     {
       name: "Alex Dunn",
-      role: "Technical Director & Developer",
+      role: "Co-Director",
       icon: Sparkles,
-      mission: "To bridge the gap between creative vision and technical implementation through innovative development",
+      mission: "Pending",
       bio: "Alex brings technical expertise to immersive experiences, specializing in interactive technologies and real-time systems. His work focuses on creating seamless integrations between physical spaces and digital elements, ensuring that technical innovation serves the narrative rather than dominating it.",
       focus: [
         "Interactive technology",
@@ -44,20 +58,6 @@ export function Team() {
         "Digital-physical hybrid experiences"
       ],
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwZGV2ZWxvcGVyJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzcxMzU1MzYzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-    },
-    {
-      name: "Xiwen Wang",
-      role: "Production Manager & Creative Producer",
-      icon: Users,
-      mission: "To ensure every project is executed with precision while maintaining the integrity of the creative vision",
-      bio: "Xiwen specializes in project management and production coordination for complex immersive experiences. Her expertise lies in bringing together diverse teams and resources to create cohesive productions that balance artistic ambition with practical execution.",
-      focus: [
-        "Project coordination",
-        "Production management",
-        "Team collaboration",
-        "Resource optimization"
-      ],
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9kdWN0aW9uJTIwbWFuYWdlciUyMHBvcnRyYWl0fGVufDF8fHx8MTc3MTM1NTM2M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     }
   ];
 
@@ -116,9 +116,7 @@ export function Team() {
                     <p className="text-base italic text-gray-300 leading-relaxed">{member.mission}</p>
                   </div>
 
-                  <p className="text-gray-400 leading-relaxed mb-6 text-sm h-[6rem] overflow-hidden">
-                    {member.bio}
-                  </p>
+                  <p className="text-gray-400 leading-relaxed mb-6 text-sm" dangerouslySetInnerHTML={{ __html: member.bio }} />
 
                   <div>
                     <h3 className="text-lg mb-2 tracking-wider">FOCUS AREAS</h3>
