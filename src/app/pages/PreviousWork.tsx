@@ -18,7 +18,7 @@ export function PreviousWork() {
         "Projection mapping accompanied by dancer",
         "Interactive lock mechanisms"
       ],
-      image: "/gallery/crash-poster.jpg",
+      image: "/gallery/crash-poster.JPG",
       tags: ["Site-Specific", "Projection", "Music", "Dance"]
     },
     {
@@ -65,7 +65,7 @@ export function PreviousWork() {
         "Immersive tunnel experience",
         "Live music combined with DJ sets"
       ],
-      image: "/gallery/technotunnel-poster.jpg",
+      image: "/gallery/technotunnel-poster.JPG",
       tags: ["Touring", "Projection", "Saxophone", "Connection"]
     }
   ];
@@ -90,7 +90,7 @@ export function PreviousWork() {
         >
           <h1 className="text-5xl md:text-7xl mb-6">Previous Work</h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Journeys we've created, worlds we've built
+            Worlds we've created
           </p>
         </motion.div>
       </section>
@@ -118,7 +118,9 @@ export function PreviousWork() {
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ${
+                          project.title === 'Tethered' ? 'scale-110' : ''
+                        }`}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                       <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -188,40 +190,6 @@ export function PreviousWork() {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20 px-6 bg-gradient-to-b from-black to-gray-900">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-3xl md:text-4xl mb-12 text-center italic">Impact & Reach</h2>
-            <div className="grid md:grid-cols-4 gap-8">
-              {[
-                { value: "1000+", label: "Participants" },
-                { value: "12+", label: "Unique Locations" },
-                { value: "4", label: "Countries" },
-                { value: "100%", label: "Site-Specific" }
-              ].map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center p-8 bg-black/50 border border-white/10"
-                >
-                  <div className="text-5xl mb-3">{stat.value}</div>
-                  <div className="text-sm tracking-wider text-gray-400">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
         </div>
       </section>
     </div>

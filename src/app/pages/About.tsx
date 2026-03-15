@@ -9,7 +9,7 @@ export function About() {
             About The Harbourers
           </div>
 
-          <div className="grid md:grid-cols-2 gap-20 mb-20">
+          <div className="max-w-[800px] mx-auto">
             <div>
               <h2 
                 className="mb-[52px]"
@@ -21,7 +21,7 @@ export function About() {
                   color: 'var(--text)'
                 }}
               >
-                A space <em style={{ fontStyle: 'italic', color: 'var(--brass-light)' }}>between</em> sea and land
+                The Harbourers
               </h2>
 
               <div 
@@ -35,68 +35,19 @@ export function About() {
                 }}
               >
                 <p>
-                  The Harbourers began in the body — in the stories a scar holds, in the particular way your fingers rest at your side, in the inherited values and unspoken storylines carried through families across generations.
+                  The Harbourers is an immersive production company making experimental, narrative-driven experiences in site-specific locations.
                 </p>
                 <p>
-                  We are an immersive productions company creating experimental, theatrical and narrative-driven experiences in site-specific locations. We do not make spectacle. We make the conditions for something true to occur.
+                  We work at the intersection of live performance and immersive technology — fusing spatial design, movement and multi-sensory environments to create experiences that go beyond watching. From raves and installations to full-length theatre productions, we build worlds that ask something of the people inside them.
                 </p>
                 <p>
-                  A harbour is neither sea nor land. It is the space of transition — of arrival, of departure, of what is carried between them. That is where we work.
+                  Our work is for audiences willing to surrender a little. All of it asks you to be present, to let the room do its work, and to arrive somewhere you didn't expect.
+                </p>
+                <p>
+                  We believe that how you experience something changes everything. Our productions are designed to stretch that capacity- and we hope what you find here stays with you long after you leave.
                 </p>
               </div>
             </div>
-
-            <div className="flex flex-col gap-0">
-              {[
-                {
-                  title: "What we make",
-                  text: "Experimental, theatrical and narrative-driven experiences in site-specific locations. Formats that facilitate community, connection, and perceptive expansion."
-                },
-                {
-                  title: "How we make it",
-                  text: "Through spatially designed choreography, immersive technology and their design principles. We consistently generate new formats through a devised research methodology."
-                },
-                {
-                  title: "Why",
-                  text: "To help people construct their reality and develop a firm grip on their perception of self. To represent real people's stories with precision and care."
-                },
-                {
-                  title: "Where we are going",
-                  text: "A body of work encompassing different styles — touring and commissioning in established venues globally."
-                }
-              ].map((pillar) => (
-                <div key={pillar.title} className="py-7 border-b border-[var(--border)] first:border-t">
-                  <div className="text-[0.65rem] tracking-[0.2em] uppercase mb-3" style={{ color: 'var(--brass)' }}>
-                    {pillar.title}
-                  </div>
-                  <div className="text-[0.88rem] leading-[1.7]" style={{ color: 'var(--text-dim)' }}>
-                    {pillar.text}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="border-l-2 pl-10 my-[60px]" style={{ borderColor: 'var(--brass)' }}>
-            <blockquote 
-              className="mb-5"
-              style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                fontStyle: 'italic',
-                fontSize: '1.6rem',
-                lineHeight: 1.5,
-                color: 'var(--text)',
-                fontWeight: 300
-              }}
-            >
-              "What is the body harbouring? What story can a scar hold — and why do your fingers rest in a certain position?"
-            </blockquote>
-            <cite 
-              className="text-[0.7rem] tracking-[0.15em] uppercase not-italic"
-              style={{ color: 'var(--brass-dim)' }}
-            >
-              Marianna Whistlecroft — Founding Practice
-            </cite>
           </div>
         </div>
       </section>

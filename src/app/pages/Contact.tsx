@@ -84,10 +84,10 @@ export function Contact() {
                   <div>
                     <h3 className="text-xl mb-2">Email</h3>
                     <a 
-                      href="mailto:hello@theharbourers.com" 
+                      href="mailto:theharbourerstheatre@gmail.com" 
                       className="text-gray-400 hover:text-white transition-colors"
                     >
-                      hello@theharbourers.com
+                      theharbourerstheatre@gmail.com
                     </a>
                   </div>
                 </div>
@@ -96,8 +96,7 @@ export function Contact() {
                   <div>
                     <h3 className="text-xl mb-2">Based in</h3>
                     <p className="text-gray-400">
-                      Birmingham & Wales, UK<br />
-                      Working globally
+                      London, United Kingdom
                     </p>
                   </div>
                 </div>
@@ -116,7 +115,7 @@ export function Contact() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-1.5 w-1.5 h-1.5 bg-white rounded-full flex-shrink-0" />
-                    Organizations seeking creative consultation
+                    Organisations seeking creative consultation
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-1.5 w-1.5 h-1.5 bg-white rounded-full flex-shrink-0" />
@@ -171,7 +170,7 @@ export function Contact() {
 
                 <div>
                   <label htmlFor="organization" className="block text-sm tracking-wider mb-2 text-gray-400">
-                    ORGANIZATION
+                    ORGANISATION
                   </label>
                   <input
                     type="text"
@@ -180,7 +179,7 @@ export function Contact() {
                     value={formData.organization}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 focus:border-white/30 outline-none transition-colors text-white"
-                    placeholder="Your organization (optional)"
+                    placeholder="Your organisation (optional)"
                   />
                 </div>
 
@@ -251,26 +250,6 @@ export function Contact() {
               </form>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Quote Section */}
-      <section className="py-20 px-6 bg-gradient-to-b from-black to-gray-900">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <blockquote className="text-2xl md:text-3xl italic mb-6 leading-relaxed text-gray-300">
-              "We are thrown from a past we cannot change to a future we have to navigate"
-            </blockquote>
-            <p className="text-gray-500 mb-8">— Dreyfus</p>
-            <p className="text-xl text-gray-400">
-              Let us help you navigate your journey into immersive storytelling
-            </p>
-          </motion.div>
         </div>
       </section>
     </div>
